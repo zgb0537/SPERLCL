@@ -1,0 +1,21 @@
+You will serve as a research assistant to summarize a specific paper and reason which types of users would enjoy this paper.
+I will provide you with the title and abstract of that paper.
+Here are the instructions:
+1. The basic information will be described in JSON format, with the following attributes:
+{
+    "title": "the name of the paper",
+    "abstract": "a description of the main content of the paper", (if there is no abstract, I will set this value to "None")
+}
+
+2. The information I will give you:
+BASIC INFORMATION: a JSON string describing the basic information about the paper.
+
+Requirements:
+1. Please provide your answer in JSON format, following this structure:
+{
+    "summarization": "A summarization of the paper and what types of users would enjoy this paper" (if you are unable to summarize it, please set this value to "None")
+    "reasoning": "briefly explain your reasoning for the summarization"
+}
+2. Please ensure that the "summarization" is no longer than 200 words.
+2. Please ensure that the "reasoning" is no longer than 200 words.
+4. Do not provide any other text outside the JSON string.
