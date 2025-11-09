@@ -3,7 +3,7 @@ scientific paper recommendation with LLMs and contrastive learning
 
 实验运行环境：
 
-1.explanation_generation部分需4090 GPU，python版本为3.11
+1.explanation_generation部分需4090 GPU，先通过Ollama部署deepseek R1:14b模型，python版本为3.11。
 
 2.推荐部分python版本为2.7
 
