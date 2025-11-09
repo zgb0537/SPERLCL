@@ -29,7 +29,7 @@ def title_abstract_split(paper):
         print(title)
         print(abstract)
     return title, abstract
-articles_reader=csv.reader(open("articles.tsv",encoding="ISO-8859-1"))
+articles_reader=csv.reader(open("../articles.tsv",encoding="ISO-8859-1"))  #先解压articles.rar文件
 articles = {}
 for row in articles_reader:
     sentence = ''
@@ -38,7 +38,7 @@ for row in articles_reader:
     id=row[0].split('\t')[0]
     articles["N"+str(id)]=sentence.replace(id+'\t','')
 
-csv_reader=csv.reader(open("test.tsv"))
+csv_reader=csv.reader(open("../test.tsv"))
 dump_data={}
 for row in csv_reader:
     user_id, click, imp, label = row[0].split("\t")  #train
@@ -64,6 +64,7 @@ with open("./test_user_prompts.json", 'w', encoding="utf8") as f:
 
         json.dump(dump_data,f)
         f.close()
+
 
 
 
